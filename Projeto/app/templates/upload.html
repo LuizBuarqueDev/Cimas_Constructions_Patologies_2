@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload e Exibição de Arquivo</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Upload</title>
 </head>
-<body>
-    <div class="container">
-        <h2>Upload de Imagem</h2>
-        <input type="file" id="fileInput" accept="image/*">
-        <br>
-        <img id="preview" alt="Prévia da Imagem" style="display: none;">
-    </div>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block contents %}
+<div class="container">
+    <h2>Upload de Vídeo</h2>
+    <input type="file" id="fileInput" accept="video/*">
+</div>
+{% endblock %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
