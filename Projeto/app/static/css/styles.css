@@ -1,0 +1,127 @@
+body {
+    background-image: url(https://www.tpfengenharia.com.br/wp-content/uploads/2022/08/tpf-mktcom-ramaldoagreste-24.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.frame-interno {
+    background-color: white;
+    width: 930px;
+    height: 540px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload {
+    height: 290px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: dashed #4192d4 3px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
+}
+
+.custum-file-upload:hover {
+    background-color: #ededed;
+}
+
+.custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .text span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload input {
+    display: none;
+}
+
+
+/* Alinha os botões à direita e coloca um ao lado do outro */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+button {
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 270px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #215cbc;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.Analisar-Arquivos {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 270px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.Analisar-Arquivos:hover {
+    background-color: #215cbc;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}

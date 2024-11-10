@@ -10,6 +10,5 @@ document.getElementById('fileInput').addEventListener('change',function(event){
         reader.readAsDataURL(file);
     } else {
         alert('por favor, selecione um arquivo');
-    }
-    
+    } 
 });
