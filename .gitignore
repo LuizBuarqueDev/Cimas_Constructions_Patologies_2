@@ -1,0 +1,11 @@
+
+Para um projeto Flask, é importante definir um .gitignore para evitar que arquivos e pastas sensíveis ou gerados automaticamente sejam incluídos no repositório. Aqui está uma lista recomendada para um projeto Flask:
+
+Arquivo .gitignore para Flask
+plaintext
+Copy code
+# Ambiente virtual
+venv/
+.env
+*.pyc
+__pycache__/
