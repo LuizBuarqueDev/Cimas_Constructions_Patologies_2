@@ -28,12 +28,22 @@ body {
     align-items: flex-start;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
 }
 
 .custum-file-upload {
@@ -82,16 +92,6 @@ body {
     display: none;
 }
 
-
-/* Alinha os botões à direita e coloca um ao lado do outro */
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-}
-
 button {
     background-color: #f3f7fe;
     color: #3b82f6;
@@ -124,4 +124,55 @@ button:hover {
     background-color: #215cbc;
     box-shadow: 0 0 0 5px #3b83f65f;
     color: #fff;
+}
+
+/* Estilos para o popup */
+.popup-overlay {
+    display: none; /* Inicialmente invisível */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+.popup-content img {
+    max-width: 100%;
+    max-height: 400px;
+    margin-bottom: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#confirm-btn,
+#cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm-btn:hover,
+#cancel-btn:hover {
+    background-color: #215cbc;
 }
