@@ -7,21 +7,20 @@ function previewImage(event) {
         reader.onload = function(e) {
             const imgSrc = e.target.result;
 
-            // Mostrar o popup com a imagem
             const popup = document.getElementById("image-popup");
             const popupImg = document.getElementById("popup-img");
             popupImg.src = imgSrc;
 
-            popup.style.display = "flex"; // Exibe o popup
+            popup.style.display = "flex"; 
 
-            // Definir o comportamento dos botões
+ 
             document.getElementById("confirm-btn").onclick = function() {
                 alert("Arquivo confirmado!");
-                popup.style.display = "none"; // Fecha o popup após confirmação
+                popup.style.display = "none"; 
             };
 
             document.getElementById("cancel-btn").onclick = function() {
-                popup.style.display = "none"; // Fecha o popup após cancelamento
+                popup.style.display = "none"; 
             };
         };
 

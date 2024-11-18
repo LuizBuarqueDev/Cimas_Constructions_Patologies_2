@@ -126,9 +126,9 @@ button:hover {
     color: #fff;
 }
 
-/* Estilos para o popup */
+
 .popup-overlay {
-    display: none; /* Inicialmente invisível */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
