@@ -176,3 +176,13 @@ button:hover {
 #cancel-btn:hover {
     background-color: #215cbc;
 }
+
+.imagesLoaded {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.imagesLoaded img {
+    height: 15vh;
+    display: inline-block;
+}

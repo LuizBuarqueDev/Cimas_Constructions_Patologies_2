@@ -1,6 +1,5 @@
 function previewImage(event) {
     const files = event.target.files;  // Obter todas as imagens selecionadas
-
     if (files.length > 0) {
         const popup = document.getElementById("image-popup");
         const popupImg = document.getElementById("popup-img");
@@ -45,3 +44,9 @@ function previewImage(event) {
         processFile(0);
     }
 }
+const btnConfirmHidden = document.getElementById("confirm-btn-hidden");
+
+document.getElementById("confirm-btn")
+.addEventListener("click",()=>btnConfirmHidden.click());
+
+

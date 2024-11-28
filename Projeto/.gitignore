@@ -1,0 +1,6 @@
+best.pt
+app/uploads
+app/__pycache__
+/venv
+
+*.zip
