@@ -17,15 +17,15 @@
                 <div class="text">
                     <span>Clique para fazer Upload</span>
                 </div>
-                <input type="file" id="file" accept="image/*" onchange="previewImage(event)">
+                <input type="file" id="file" accept="image/*" multiple onchange="previewImages(event)">
             </label>
         </div>
     </form>
 </div>
 
-<div id="image-popup" class="popup-overlay">
+<div id="image-popup" class="popup-overlay" style="display:none;">
     <div class="popup-content">
-        <img id="popup-img" src="" alt="Imagem para Confirmar" />
+        <div id="popup-container"></div>
         <div class="popup-buttons">
             <button id="confirm-btn">Confirmar</button>
             <button id="cancel-btn">Cancelar</button>
