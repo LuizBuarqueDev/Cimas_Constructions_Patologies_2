@@ -2,7 +2,7 @@
 
 {% block contents %}
 <div class="frame-interno">
-    <form class="formulario" id="formulario">
+    <form class="formulario" id="formulario" method="POST" action="/upload" enctype="multipart/form-data">
         <div class="button-container">
             <button class="Analisar-Arquivos" type="submit">Analisar Arquivo</button>
             <button type="submit">Abrir Relatórios</button>
@@ -17,15 +17,16 @@
                 <div class="text">
                     <span>Clique para fazer Upload</span>
                 </div>
-                <input type="file" id="file" accept="image/*" multiple onchange="previewImages(event)">
+                <!-- Permite selecionar pastas -->
+                <input type="file" id="file" name="images" accept="image/*" multiple webkitdirectory onchange="previewImage(event)">
             </label>
         </div>
     </form>
 </div>
 
-<div id="image-popup" class="popup-overlay" style="display:none;">
+<div id="image-popup" class="popup-overlay">
     <div class="popup-content">
-        <div id="popup-container"></div>
+        <img id="popup-img" src="" alt="Imagem para Confirmar" />
         <div class="popup-buttons">
             <button id="confirm-btn">Confirmar</button>
             <button id="cancel-btn">Cancelar</button>

@@ -1,48 +1,47 @@
-function previewImages(event) {
-    const files = event.target.files;
-    
-    // Limpar as imagens anteriores no popup
-    const popupContainer = document.getElementById("popup-container");
-    popupContainer.innerHTML = '';
+function previewImage(event) {
+    const files = event.target.files;  // Obter todas as imagens selecionadas
 
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+    if (files.length > 0) {
+        const popup = document.getElementById("image-popup");
+        const popupImg = document.getElementById("popup-img");
 
-        if (file && file.type.startsWith("image/")) {
+        // Função para processar cada arquivo de imagem de forma assíncrona
+        function processFile(index) {
+            if (index >= files.length) return; // Se não há mais arquivos para processar, saímos
+
+            const file = files[index];
             const reader = new FileReader();
 
             reader.onload = function(e) {
                 const imgSrc = e.target.result;
+                // Exibe a imagem no popup
+                popupImg.src = imgSrc;
+                popup.style.display = "flex";  // Exibe o popup
 
-                const imgElement = document.createElement("img");
-                imgElement.src = imgSrc;
-                imgElement.style.maxWidth = "300px";
-                imgElement.style.margin = "10px";
-                imgElement.style.border = "2px solid white";
-                imgElement.style.cursor = "pointer";  // Para indicar que é interativo
+                // Função para confirmar o envio das imagens
+                document.getElementById("confirm-btn").onclick = function() {
+                    alert("Arquivos confirmados!");
+                    popup.style.display = "none";  // Fecha o popup
+                };
 
-                // Adicionar a imagem ao contêiner do popup
-                popupContainer.appendChild(imgElement);
+                // Função para cancelar o envio
+                document.getElementById("cancel-btn").onclick = function() {
+                    popup.style.display = "none";  // Fecha o popup
+                };
+
+                // Depois de processar o arquivo, chama a função recursivamente para o próximo
+                processFile(index + 1);
             };
 
+            reader.onerror = function() {
+                console.error("Erro ao tentar ler o arquivo", file.name);
+            };
+
+            // Inicia a leitura do arquivo
             reader.readAsDataURL(file);
-        } else {
-            alert("Por favor, selecione apenas imagens.");
-            return;
         }
+
+        // Inicia o processo com o primeiro arquivo
+        processFile(0);
     }
-
-    // Exibir o popup
-    const popup = document.getElementById("image-popup");
-    popup.style.display = "flex";
-
-    // Configuração dos botões de confirmação e cancelamento
-    document.getElementById("confirm-btn").onclick = function() {
-        alert("Arquivos confirmados!");
-        popup.style.display = "none";
-    };
-
-    document.getElementById("cancel-btn").onclick = function() {
-        popup.style.display = "none";
-    };
 }
