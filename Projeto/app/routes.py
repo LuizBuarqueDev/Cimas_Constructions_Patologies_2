@@ -16,6 +16,7 @@ def download(filename):
 
 def zip_folder(folder_path,zip_path):
     shutil.make_archive(zip_path,'zip',folder_path)
+    shutil.rmtree(folder_path)
     
 @app.route('/')
 @app.route('/index')
