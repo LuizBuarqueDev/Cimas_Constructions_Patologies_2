@@ -8,6 +8,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 151, 255, 0.212); 
+    z-index: -1; 
 }
 
 .frame-interno {
@@ -16,34 +28,33 @@ body {
     height: 540px;
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Espaço entre a imagem/botões e o upload */
     align-items: center;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px; /* Adiciona espaço interno */
 }
 
 .formulario {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start;
+    flex-direction: row; /* Coloca os itens (imagem/botões e upload) lado a lado */
+    justify-content: space-between; /* Distribui o conteúdo igualmente entre os lados */
+    width: 100%;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px;
+    align-items: center; /* Alinha os botões no centro */
 }
 
 .input-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    flex-grow: 1;
+    width: 45%; /* Define a largura do lado direito (upload) */
+    font-family: sans-serif;
 }
 
 .custum-file-upload {
@@ -56,14 +67,14 @@ body {
     align-items: center;
     justify-content: center;
     border: dashed #4192d4 3px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
 }
 
 .custum-file-upload:hover {
-    background-color: #ededed;
+    background-color: #ececec;
 }
 
 .custum-file-upload .icon {
@@ -185,4 +196,16 @@ button:hover {
 .imagesLoaded img {
     height: 15vh;
     display: inline-block;
+}
+
+.logo-imagem {
+    width: 80%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column; /* Imagem e botões em coluna */
+    align-items: center;
+    gap: 20px; /* Espaçamento entre a imagem e os botões */
 }

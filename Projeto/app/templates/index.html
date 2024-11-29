@@ -3,10 +3,16 @@
 {% block contents %}
 <div class="frame-interno">
     <form class="formulario" id="formulario" method="POST" action="/upload" enctype="multipart/form-data">
-        <div class="button-container">
-            <button class="Analisar-Arquivos" onclick="predict()">Analisar Arquivo</button>
-            <button type="submit">Abrir Relatórios</button>
+        <!-- Lado esquerdo (Imagem e Botões) -->
+        <div class="left-side">
+            <img src="https://s3-sa-east-1.amazonaws.com/recrutai-dev/5b01b5b0-f7b6-11ec-9cf7-25bc0fbcfea6/bed69c50-11d7-11ed-a94d-6359c2e914c5/logo/bed69c50-11d7-11ed-a94d-6359c2e914c5_1706619527799_128.png" alt="Logo" class="logo-imagem">
+            <div class="button-container">
+                <button class="Analisar-Arquivos" onclick="predict()">Analisar Arquivo</button>
+                <button type="submit">Abrir Relatórios</button>
+            </div>
         </div>
+        
+        <!-- Lado direito (Área de Upload) -->
         <div class="input-container">
             <label class="custum-file-upload" for="file">
                 <div class="icon">
@@ -17,15 +23,12 @@
                 <div class="text">
                     <span>Clique para fazer Upload</span>
                 </div>
-                <!-- Permite selecionar pastas -->
-                 
                 <input type="file" id="file" name="images" accept="image/*" multiple webkitdirectory onchange="previewImage(event)">
             </label>
         </div>
-        <button type="submit" style="display: none" id="confirm-btn-hidden"></button>
     </form>
-    
 </div>
+
 <div class="imagesLoaded">
     {% if uploaded_files %}
     <h2>Imagens Carregadas: </h2>
@@ -47,6 +50,7 @@
         <a href="{{ resource }}">baixe as imagens</a>
     {% endif %}
 </div>
+
 <div id="image-popup" class="popup-overlay">
     <div class="popup-content">
         <img id="popup-img" src="" alt="Imagem para Confirmar" />
