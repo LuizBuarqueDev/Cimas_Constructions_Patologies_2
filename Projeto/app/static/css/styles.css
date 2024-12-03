@@ -28,16 +28,16 @@ body::after {
     height: 540px;
     border-radius: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço entre a imagem/botões e o upload */
     align-items: center;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 20px; /
+    padding: 20px; /* Adiciona espaço interno */
 }
 
 .formulario {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row; /* Coloca os itens (imagem/botões e upload) lado a lado */
+    justify-content: space-between; /* Distribui o conteúdo igualmente entre os lados */
     width: 100%;
 }
 
@@ -45,15 +45,15 @@ body::after {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    align-items: center; /* Alinha os botões no centro */
 }
 
 .input-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 70px 20px 0px;
-    width: 45%;
+    padding: 20px;
+    width: 45%; /* Define a largura do lado direito (upload) */
     font-family: sans-serif;
 }
 
@@ -95,7 +95,6 @@ body::after {
 }
 
 .custum-file-upload .text span {
-    font-family: sans-serif;
     font-weight: 400;
     color: rgba(75, 85, 99, 1);
 }
@@ -122,19 +121,19 @@ button:hover {
 }
 
 .Analisar-Arquivos {
-    background-color: #056CF2;
+    background-color: #3b82f6;
     color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    width: 320px;
+    width: 270px;
     height: 45px;
     transition: 0.3s;
 }
 
 .Analisar-Arquivos:hover {
-    background-color: #056CF2;
-    box-shadow: 0 0 0 5px #056CF25f;
+    background-color: #215cbc;
+    box-shadow: 0 0 0 5px #3b83f65f;
     color: #fff;
 }
 
@@ -200,31 +199,13 @@ button:hover {
 }
 
 .logo-imagem {
-    width: 80%;
-    height: auto;
+    width: 80%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .left-side {
-    width: 395px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Imagem e botões em coluna */
     align-items: center;
-    gap: 20px;
-    padding: 0px 0px 0px 40px;
-}
-
-.Analisar-Arquivos-baixados{
-    background-color: #F26241;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 320px;
-    height: 45px;
-    transition: 0.3s;
-}
-.Analisar-Arquivos-baixados:hover{
-    background-color: #F26241;
-    box-shadow: 0 0 0 5px #F262415f;
-    color: #fff;
+    gap: 20px; /* Espaçamento entre a imagem e os botões */
 }
