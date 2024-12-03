@@ -24,12 +24,12 @@ def index():
     return render_template('index.html')
 
 def predict(path):
-    result = model.predict(path,conf=0.18,classes=[1])[0]
+    result = model.predict(path,conf=0.18,classes=[1], save_conf=False)[0]
 
-    result.names[1] = 'Área de Risco'
     path = path.replace('.','_predict.')
     
     result.save(path)
+    result.names[1] = 'Área de Risco'
     return path.split(os.path.sep)[-1]
 
 @app.route('/upload', methods=['POST'])
