@@ -48,7 +48,15 @@ Agora, ative o ambiente virtual:
 
 Depois de ativar o ambiente, você deve ver algo como `(venv)` antes do prompt no terminal, indicando que o ambiente virtual está ativo.
 
-## Passo 5: Executar o Projeto Flask
+## Passo 5: Instale as dependências do requirements.txt
+
+Depois de ativar o ambiente, instale todas as dependências que são utilizadas no projeto:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Passo 6: Executar o Projeto Flask
 
 Depois de instalar as dependências, você pode rodar o servidor Flask com o comando:
 
@@ -56,7 +64,7 @@ Depois de instalar as dependências, você pode rodar o servidor Flask com o com
 flask run
 ```
 
-## Passo 6: Acessar o Projeto
+## Passo 7: Acessar o Projeto
 
 Depois de executar o comando `flask run`, o servidor deve estar rodando em `http://127.0.0.1:5000/`. Abra seu navegador e acesse esse endereço para visualizar o projeto.
 
